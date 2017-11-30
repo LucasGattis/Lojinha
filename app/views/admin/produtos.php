@@ -6,6 +6,7 @@
     $listaProdutos = $crud->getProdutos();
 
     ## !!ADICIONE AQUI O CABECALHO DA PAGINA
+    require_once __DIR__."/cabecalho.php";
 
 ?>
 
@@ -47,3 +48,4 @@
 </table>
 
 <!-- ## ADICIONE AQUI O RODAPE DA PAGINA -->
+<?php require_once __DIR__."/rodape.php";?>
