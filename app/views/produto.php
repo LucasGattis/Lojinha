@@ -77,8 +77,8 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <span class="badge badge-primary">mostre a categoria</span>
-                    <span class="badge badge-warning">mostre a disponibilidade</span>
+                    <span class="badge badge-primary"><?=$produto->preco?></span>
+                    <span class="badge badge-warning"><?=$produto->estaDisponivel()?></span>
                 </div>
             </div>
             <!-- end row -->
@@ -97,16 +97,18 @@
                 </div>
             </div>
             <!-- end row -->
-            <div class="row add-to-cart">
-                <div class="col-md-5 product-qty">
-                    <form action="../controllers/controladorProduto.php?acao=compra&id=<?= $codigo ?>" method="post">
-                    <input class="btn btn-default btn-lg btn-qty" value="1" name="qtd" />
-                    <button class="btn btn-lg btn-brand btn-full-width"  >
-                        compra
-                    </button>
-                    </form>
+            <form action="../controllers/controladorProduto.php?acao=compra" method="post">
+                <div class="row add-to-cart">
+                    <div class="col-md-5 product-qty">
+                        <input class="btn btn-default btn-lg btn-qty" value="1" name="qtd" />
+                        <input type="hidden" value="<?= $codigo ?>" name="id">
+                        <button class="btn btn-lg btn-brand btn-full-width"  >
+                            compra
+                        </button>
+
+                    </div>
                 </div>
-            </div>
+            </form>
             <!-- end row -->
 
         </div>

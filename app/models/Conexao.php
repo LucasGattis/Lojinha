@@ -25,7 +25,7 @@ class Conexao {
                 self::$conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             }
             
-            return self::$conexao;
+            return self:: $conexao;
             
         }catch(PDOException $e){
             die("Falhou a conexao ou ocorreu um erro banco: " . $e->getMessage()); 

@@ -50,8 +50,9 @@ if ( $_GET['acao']== 'excluir'){
 }
 if ($_GET['acao'] == 'compra'){
 
-
     $crud = new CrudProdutos();
-    $crud = compra($_GET['id'],$_POST['qtd']);
-    header('Location: ../views/produto.php');
+    $crud->comprar($_POST['id'],$_POST['qtd']);
+    header("location: ../views/produto.php?codigo=$_POST[id]");
+
+
 }

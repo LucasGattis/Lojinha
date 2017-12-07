@@ -27,9 +27,9 @@ class Produto {
     public function estaDisponivel(){
         // o estqoeu for maior que zero retorna disponivel
         if ($this->estoque > 0){
-            echo "Disponivel";
+            return "Disponivel";
         }else{
-            echo "Indisponivel";
+            return "Indisponivel";
         }
     }
 
