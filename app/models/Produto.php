@@ -16,7 +16,7 @@ class Produto {
     public $categoria;
     public $estoque;
 
-    public function __construct($nome, $preco, $categoria,$estoque, $codigo = null){
+    public function __construct($nome, $preco,$estoque,$categoria, $codigo = null){
         $this->nome = $nome;
         $this->preco = $preco;
         $this->categoria = $categoria;

@@ -13,7 +13,7 @@ body {
 }
 
 .bg-dark {
-  background-color: #3179FF !important;
+  background-color: rgb(49, 121, 255) !important;
 }
 
 .btn-ifc {
@@ -32,4 +32,6 @@ body {
   width: 100%;
   bottom: 0;
 }
-
+row{
+  margin : 10% 10% 10% 10%;
+}

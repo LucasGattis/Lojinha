@@ -12,6 +12,8 @@
 
 
 
+
+
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +29,7 @@
     <title>Lojão do IFC</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../../assets/css/ifc-style.css" rel="stylesheet">
 
 </head>
@@ -95,15 +97,17 @@
                 </div>
             </div>
             <!-- end row -->
-
             <div class="row add-to-cart">
                 <div class="col-md-5 product-qty">
-                    <input class="btn btn-default btn-lg btn-qty" value="1" />
-                    <button class="btn btn-lg btn-brand btn-full-width">
-                        comprar
+                    <form action="../controllers/controladorProduto.php?acao=compra&id=<?= $codigo ?>" method="post">
+                    <input class="btn btn-default btn-lg btn-qty" value="1" name="qtd" />
+                    <button class="btn btn-lg btn-brand btn-full-width"  >
+                        compra
                     </button>
+                    </form>
                 </div>
-            </div><!-- end row -->
+            </div>
+            <!-- end row -->
 
         </div>
 

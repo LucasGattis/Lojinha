@@ -19,8 +19,7 @@ class CrudProdutos {
     }
 
     public function salvar(Produto $produto){
-        $sql = "INSERT INTO tb_produtos (nome, preco, categoria,estoque) VALUES ('$produto->nome', $produto->preco, '$produto->categoria','$produto->estoque')";
-
+        $sql = "INSERT INTO tb_produtos (nome, preco,quantidade_estoque,categoria) VALUES ('$produto->nome','$produto->preco','$produto->estoque','$produto->categoria')";
         $this->conexao->exec($sql);
     }
 
@@ -44,5 +43,20 @@ class CrudProdutos {
 
         return $listaProdutos;
 
+    }
+    public function excluir(int $id){
+
+        $this->conexao->exec("DELETE FROM tb_produtos WHERE codigo = $id");
+
+
+    }
+    public function editar($codigo,$preco,$qtd,$categoria,$nome){
+
+        $this->conexao->exec("UPDATE tb_produtos set nome = '$nome',categoria = '$categoria',preco =$preco,quantidade_estoque = $qtd WHERE codigo = $codigo");
+
+    }
+    public  function compra($id,$qtd){
+        $qtd2 = $this->estoque;
+        $this->conexao->exec("UPDATE tb_produtos set quantidade_estoque = ($qtd2-$qtd) WHERE codigo = $id");
     }
 }

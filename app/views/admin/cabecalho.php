@@ -57,7 +57,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Página inicial</a>
+                    <a class="nav-link" href="../../../index.php">Página inicial</a>
                 </li>
             </ul>
         </div>
@@ -73,8 +73,8 @@
         <div class="col-md-2 px-0 admin-menu" style="position: fixed; top: 50px; bottom: 0; ">
             <img src="../../../assets/imagens/avatar.gif" alt="" class="img-fluid rounded-circle" style="padding: 15px;">
             <ul>
-                <li><a href="">Produtos</a></li>
-                <li><a href="">Cadastrar Produto</a></li>
+                <li><a href="produtos.php">Produtos</a></li>
+                <li><a href="cadastro-produto.php">Cadastrar Produto</a></li>
             </ul>
         </div>
 

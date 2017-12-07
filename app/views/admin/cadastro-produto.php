@@ -27,7 +27,7 @@ require_once "cabecalho.php";
     </div>
 
     <div class="form-group">
-        <label for="Categoria">Categoria</label>
+        <label for="categoria">Categoria</label>
         <select name="categoria" class="form-control" id="Categoria">
             <option>Fruta</option>
             <option>Legume</option>
